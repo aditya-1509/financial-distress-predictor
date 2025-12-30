@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["python312", "gcc", "g++", "cmake", "pkg-config"]
+nixPkgs = ["python312", "gcc11", "cmake"]
 
 [phases.install]
 cmds = [
@@ -13,7 +13,6 @@ cmds = [
 ]
 
 [phases.build]
-cmds = []
 
 [start]
 cmd = "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
