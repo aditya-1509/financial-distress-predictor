@@ -1,0 +1,443 @@
+{
+  "feature_columns": [
+    "Unnamed: 0",
+    "Head_Sex",
+    "Head_Age",
+    "Household Head Marital Status",
+    "Household Head Highest Grade Completed",
+    "Employment_Status",
+    "Household Head Occupation",
+    "Household Head Class of Worker",
+    "Household_Type",
+    "Household_Size",
+    "Members with age less than 5 year old",
+    "Members with age 5 - 17 years old",
+    "Total number of family members employed",
+    "Food",
+    "Bread and Cereals Expenditure",
+    "Total Rice Expenditure",
+    "Meat Expenditure",
+    "Total Fish and  marine products Expenditure",
+    "Fruit Expenditure",
+    "Vegetables Expenditure",
+    "Restaurants",
+    "Alcoholic Beverages Expenditure",
+    "Tobacco Expenditure",
+    "Clothing",
+    "Housing",
+    "Health",
+    "Transport",
+    "Communication",
+    "Education",
+    "Miscellaneous",
+    "Special_Occasions",
+    "Main Source of Income",
+    "Number of Airconditioner",
+    "Electricity",
+    "House Age",
+    "Number of bedrooms",
+    "Number of Personal Computer",
+    "Total Income from Entrepreneurial Acitivites",
+    "Net_Income",
+    "Number of Component/Stereo set",
+    "Type of Roof",
+    "Number of Washing Machine",
+    "Number of Motorized Banca",
+    "Number of Cellular phone",
+    "Number of Television",
+    "Imputed House Rental Value",
+    "Toilet Facilities",
+    "Type of Walls",
+    "House Floor Area",
+    "Agricultural Household indicator",
+    "Type of Building/House",
+    "Number of Stove with Oven/Gas Range",
+    "Number of Refrigerator/Freezer",
+    "Number of Car, Jeep, Van",
+    "Number of Landline/wireless telephones",
+    "Number of Motorcycle/Tricycle",
+    "Region",
+    "Crop Farming and Gardening expenses",
+    "Main Source of Water Supply",
+    "Tenure Status",
+    "Number of CD/VCD/DVD",
+    "Recreation",
+    "Total_Expenditure",
+    "Savings",
+    "Expenditure_to_Income_Ratio",
+    "Savings_Rate",
+    "Housing_to_Income_Ratio",
+    "Food_to_Total_Exp_Ratio",
+    "Transport_to_Income_Ratio",
+    "Essential_Spending",
+    "Essential_Spending_Share",
+    "Discretionary_Spending",
+    "Discretionary_Spending_Share",
+    "Per_Capita_Income",
+    "Per_Capita_Expenditure",
+    "Spending_Variance",
+    "Spending_Std",
+    "Spending_CV",
+    "Health_Spending_Ratio",
+    "Education_Spending_Ratio",
+    "Months_of_Savings",
+    "Is_Overspending",
+    "High_Housing_Burden",
+    "Low_Savings"
+  ],
+  "categorical_features": [
+    "Head_Sex",
+    "Household Head Marital Status",
+    "Household Head Highest Grade Completed",
+    "Employment_Status",
+    "Household Head Occupation",
+    "Household Head Class of Worker",
+    "Household_Type",
+    "Main Source of Income",
+    "Type of Roof",
+    "Toilet Facilities",
+    "Type of Walls",
+    "Type of Building/House",
+    "Region",
+    "Main Source of Water Supply",
+    "Tenure Status"
+  ],
+  "feature_importance": [
+    {
+      "feature": "Savings_Rate",
+      "importance": 49.455650746185256
+    },
+    {
+      "feature": "Low_Savings",
+      "importance": 27.413732889072385
+    },
+    {
+      "feature": "Expenditure_to_Income_Ratio",
+      "importance": 22.942284272567882
+    },
+    {
+      "feature": "Main Source of Income",
+      "importance": 0.04632925142372323
+    },
+    {
+      "feature": "Number of Personal Computer",
+      "importance": 0.03828221224104722
+    },
+    {
+      "feature": "Bread and Cereals Expenditure",
+      "importance": 0.03520898898468293
+    },
+    {
+      "feature": "Food",
+      "importance": 0.023869993756758984
+    },
+    {
+      "feature": "Meat Expenditure",
+      "importance": 0.016914210993751233
+    },
+    {
+      "feature": "Fruit Expenditure",
+      "importance": 0.015282350765114897
+    },
+    {
+      "feature": "Number of Landline/wireless telephones",
+      "importance": 0.005997773109429884
+    },
+    {
+      "feature": "Toilet Facilities",
+      "importance": 0.004716130982300669
+    },
+    {
+      "feature": "Type of Roof",
+      "importance": 0.0017311799176644126
+    },
+    {
+      "feature": "House Floor Area",
+      "importance": 0.0
+    },
+    {
+      "feature": "Agricultural Household indicator",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of CD/VCD/DVD",
+      "importance": 0.0
+    },
+    {
+      "feature": "Tenure Status",
+      "importance": 0.0
+    },
+    {
+      "feature": "Main Source of Water Supply",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Refrigerator/Freezer",
+      "importance": 0.0
+    },
+    {
+      "feature": "Type of Building/House",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Car, Jeep, Van",
+      "importance": 0.0
+    },
+    {
+      "feature": "Crop Farming and Gardening expenses",
+      "importance": 0.0
+    },
+    {
+      "feature": "Total_Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Region",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Motorcycle/Tricycle",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Stove with Oven/Gas Range",
+      "importance": 0.0
+    },
+    {
+      "feature": "Recreation",
+      "importance": 0.0
+    },
+    {
+      "feature": "Housing_to_Income_Ratio",
+      "importance": 0.0
+    },
+    {
+      "feature": "Savings",
+      "importance": 0.0
+    },
+    {
+      "feature": "Food_to_Total_Exp_Ratio",
+      "importance": 0.0
+    },
+    {
+      "feature": "High_Housing_Burden",
+      "importance": 0.0
+    },
+    {
+      "feature": "Is_Overspending",
+      "importance": 0.0
+    },
+    {
+      "feature": "Months_of_Savings",
+      "importance": 0.0
+    },
+    {
+      "feature": "Education_Spending_Ratio",
+      "importance": 0.0
+    },
+    {
+      "feature": "Health_Spending_Ratio",
+      "importance": 0.0
+    },
+    {
+      "feature": "Spending_CV",
+      "importance": 0.0
+    },
+    {
+      "feature": "Spending_Std",
+      "importance": 0.0
+    },
+    {
+      "feature": "Spending_Variance",
+      "importance": 0.0
+    },
+    {
+      "feature": "Per_Capita_Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Per_Capita_Income",
+      "importance": 0.0
+    },
+    {
+      "feature": "Discretionary_Spending_Share",
+      "importance": 0.0
+    },
+    {
+      "feature": "Discretionary_Spending",
+      "importance": 0.0
+    },
+    {
+      "feature": "Essential_Spending_Share",
+      "importance": 0.0
+    },
+    {
+      "feature": "Essential_Spending",
+      "importance": 0.0
+    },
+    {
+      "feature": "Transport_to_Income_Ratio",
+      "importance": 0.0
+    },
+    {
+      "feature": "Type of Walls",
+      "importance": 0.0
+    },
+    {
+      "feature": "Unnamed: 0",
+      "importance": 0.0
+    },
+    {
+      "feature": "Imputed House Rental Value",
+      "importance": 0.0
+    },
+    {
+      "feature": "Members with age less than 5 year old",
+      "importance": 0.0
+    },
+    {
+      "feature": "Alcoholic Beverages Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Restaurants",
+      "importance": 0.0
+    },
+    {
+      "feature": "Vegetables Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Total Fish and  marine products Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Total Rice Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Total number of family members employed",
+      "importance": 0.0
+    },
+    {
+      "feature": "Members with age 5 - 17 years old",
+      "importance": 0.0
+    },
+    {
+      "feature": "Household_Size",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Television",
+      "importance": 0.0
+    },
+    {
+      "feature": "Household_Type",
+      "importance": 0.0
+    },
+    {
+      "feature": "Household Head Class of Worker",
+      "importance": 0.0
+    },
+    {
+      "feature": "Household Head Occupation",
+      "importance": 0.0
+    },
+    {
+      "feature": "Employment_Status",
+      "importance": 0.0
+    },
+    {
+      "feature": "Household Head Highest Grade Completed",
+      "importance": 0.0
+    },
+    {
+      "feature": "Household Head Marital Status",
+      "importance": 0.0
+    },
+    {
+      "feature": "Head_Age",
+      "importance": 0.0
+    },
+    {
+      "feature": "Tobacco Expenditure",
+      "importance": 0.0
+    },
+    {
+      "feature": "Clothing",
+      "importance": 0.0
+    },
+    {
+      "feature": "Housing",
+      "importance": 0.0
+    },
+    {
+      "feature": "Health",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Cellular phone",
+      "importance": 0.0
+    },
+    {
+      "feature": "Head_Sex",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Washing Machine",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Component/Stereo set",
+      "importance": 0.0
+    },
+    {
+      "feature": "Net_Income",
+      "importance": 0.0
+    },
+    {
+      "feature": "Total Income from Entrepreneurial Acitivites",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of bedrooms",
+      "importance": 0.0
+    },
+    {
+      "feature": "House Age",
+      "importance": 0.0
+    },
+    {
+      "feature": "Electricity",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Airconditioner",
+      "importance": 0.0
+    },
+    {
+      "feature": "Special_Occasions",
+      "importance": 0.0
+    },
+    {
+      "feature": "Miscellaneous",
+      "importance": 0.0
+    },
+    {
+      "feature": "Education",
+      "importance": 0.0
+    },
+    {
+      "feature": "Communication",
+      "importance": 0.0
+    },
+    {
+      "feature": "Transport",
+      "importance": 0.0
+    },
+    {
+      "feature": "Number of Motorized Banca",
+      "importance": 0.0
+    }
+  ]
+}
