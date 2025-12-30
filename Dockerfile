@@ -1,14 +1,22 @@
-FROM python:3.12-slim
+FROM python:3.12-bullseye as builder
 
-WORKDIR /app
+WORKDIR /build
 
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
+    make \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --user -r requirements.txt
+
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY --from=builder /root/.local /root/.local
+ENV PATH=/root/.local/bin:$PATH
 
 COPY . .
 
