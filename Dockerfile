@@ -1,22 +1,12 @@
-FROM python:3.12-bullseye as builder
-
-WORKDIR /build
-
-RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
-    make \
-    && rm -rf /var/lib/apt/lists/*
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir --user -r requirements.txt
-
-FROM python:3.12-slim
+FROM continuumio/miniconda3:latest
 
 WORKDIR /app
 
-COPY --from=builder /root/.local /root/.local
-ENV PATH=/root/.local/bin:$PATH
+RUN conda install -c conda-forge python=3.12 catboost scikit-learn pandas numpy scipy -y && \
+    conda clean -afy
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir fastapi uvicorn pydantic python-dotenv python-multipart joblib pillow gunicorn
 
 COPY . .
 
