@@ -26,7 +26,7 @@ const GoalPlanningWidget = ({ householdData }) => {
         setIsAnalyzing(true)
 
         try {
-            const response = await fetch('/api/analyze_goal', {
+            const response = await fetch('/analyze_goal', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -101,8 +101,8 @@ const GoalPlanningWidget = ({ householdData }) => {
                                 <div className="flex items-center space-x-3 mb-2">
                                     <h4 className="font-mono text-white font-bold">{goal.goal_name}</h4>
                                     <span className={`text-xs px-2 py-1 rounded font-mono ${goal.analysis.feasibility === 'Achievable' ? 'bg-green-950 text-green-400' :
-                                            goal.analysis.feasibility === 'Tight' ? 'bg-yellow-950 text-yellow-400' :
-                                                'bg-red-950 text-red-400'
+                                        goal.analysis.feasibility === 'Tight' ? 'bg-yellow-950 text-yellow-400' :
+                                            'bg-red-950 text-red-400'
                                         }`}>
                                         {goal.analysis.feasibility}
                                     </span>
@@ -192,7 +192,7 @@ const GoalPlanningWidget = ({ householdData }) => {
                                         <AlertCircle className="w-5 h-5 text-red-400" />
                                     )}
                                     <span className={`font-mono font-bold ${analysis.feasibility === 'Achievable' ? 'text-green-400' :
-                                            analysis.feasibility === 'Tight' ? 'text-yellow-400' : 'text-red-400'
+                                        analysis.feasibility === 'Tight' ? 'text-yellow-400' : 'text-red-400'
                                         }`}>
                                         {analysis.feasibility}
                                     </span>
