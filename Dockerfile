@@ -1,11 +1,11 @@
-FROM python:3.12-slim
+FROM python:3.10-slim
 
 WORKDIR /app
 
 # Install system dependencies
-# libgomp1 is required for CatBoost/XGBoost
 RUN apt-get update && apt-get install -y \
     libgomp1 \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
