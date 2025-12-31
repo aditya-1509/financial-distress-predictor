@@ -6,7 +6,7 @@ RUN conda install -c conda-forge python=3.12 catboost scikit-learn pandas numpy 
     conda clean -afy
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir fastapi uvicorn pydantic python-dotenv python-multipart joblib pillow gunicorn
+RUN pip install --no-cache-dir fastapi uvicorn pydantic python-dotenv python-multipart joblib pillow gunicorn shap matplotlib
 
 COPY . .
 
