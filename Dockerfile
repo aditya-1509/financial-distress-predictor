@@ -2,7 +2,7 @@ FROM continuumio/miniconda3:latest
 
 WORKDIR /app
 
-RUN conda install -c conda-forge python=3.12 catboost scikit-learn pandas numpy scipy -y && \
+RUN conda install -c conda-forge python=3.12 catboost scikit-learn pandas numpy scipy shap matplotlib -y && \
     conda clean -afy
 
 COPY requirements.txt .
