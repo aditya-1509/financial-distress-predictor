@@ -1,34 +1,22 @@
-FROM continuumio/miniconda3:latest
+FROM python:3.12-slim
 
 WORKDIR /app
 
-# Install ALL dependencies via conda-forge for binary compatibility
-# This avoids compilation issues with pip on minimal images
-RUN conda install -c conda-forge -y \
-    python=3.12 \
-    catboost \
-    scikit-learn \
-    pandas \
-    numpy \
-    scipy \
-    shap \
-    matplotlib \
-    fastapi \
-    uvicorn \
-    pydantic \
-    python-dotenv \
-    python-multipart \
-    joblib \
-    pillow \
-    gunicorn \
-    numba && \
-    conda clean -afy
+# Install system dependencies
+# libgomp1 is required for CatBoost/XGBoost
+RUN apt-get update && apt-get install -y \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-# No pip install needed if conda covers everything
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Hugging Face Spaces port
 EXPOSE 7860
 
+# CMD to start the app
 CMD ["sh", "-c", "cd backend && uvicorn main:app --host 0.0.0.0 --port 7860"]
