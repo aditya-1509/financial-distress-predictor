@@ -13,3 +13,5 @@ python-dotenv
 joblib
 pillow
 gunicorn
+reportlab
+statsmodels
