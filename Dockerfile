@@ -2,11 +2,30 @@ FROM continuumio/miniconda3:latest
 
 WORKDIR /app
 
-RUN conda install -c conda-forge python=3.12 catboost scikit-learn pandas numpy scipy shap matplotlib -y && \
+# Install ALL dependencies via conda-forge for binary compatibility
+# This avoids compilation issues with pip on minimal images
+RUN conda install -c conda-forge -y \
+    python=3.12 \
+    catboost \
+    scikit-learn \
+    pandas \
+    numpy \
+    scipy \
+    shap \
+    matplotlib \
+    fastapi \
+    uvicorn \
+    pydantic \
+    python-dotenv \
+    python-multipart \
+    joblib \
+    pillow \
+    gunicorn \
+    numba && \
     conda clean -afy
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir fastapi uvicorn pydantic python-dotenv python-multipart joblib pillow gunicorn shap matplotlib
+# No pip install needed if conda covers everything
 
 COPY . .
 
