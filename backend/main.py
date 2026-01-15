@@ -320,9 +320,6 @@ async def predict_financial_distress(household: HouseholdInput):
         prob_medium = prediction_result['probabilities'].get('Medium', 0)
         prob_low = prediction_result['probabilities'].get('Low', 0)
         
-        risk_penalty = (prob_high * 100) + (prob_medium * 50)
-        health_score = max(0, min(100, 100 - risk_penalty))
-        
         risk_factors = []
         
         if user_data['Housing_to_Income_Ratio'] > 0.35:
@@ -422,6 +419,21 @@ async def predict_financial_distress(household: HouseholdInput):
         debt_pressure = max(0, min(100, 100 - (user_data['Housing_to_Income_Ratio'] * 200)))
         
         savings_discipline = min(100, max(0, user_data['Savings_Rate'] * 300))
+        
+        # Calculate composite health score from financial metrics (70%) + ML adjustment (30%)
+        # This provides granular differentiation based on actual inputs
+        metric_score = (
+            income_stability * 0.25 +
+            expense_control * 0.25 +
+            debt_pressure * 0.25 +  # Already inverted (higher = less pressure)
+            savings_discipline * 0.25
+        )
+        
+        # ML adjustment: boost for low risk predictions, penalty for high risk
+        ml_adjustment = (prob_low * 10) - (prob_high * 15) - (prob_medium * 5)
+        
+        # Combine: 70% from metrics, 30% influenced by ML adjustment
+        health_score = max(0, min(100, (metric_score * 0.7) + (50 * 0.3) + ml_adjustment))
         
         health_breakdown = HealthScoreBreakdown(
             income_stability=round(income_stability, 1),

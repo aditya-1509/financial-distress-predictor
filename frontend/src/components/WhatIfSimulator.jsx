@@ -13,7 +13,8 @@ const WhatIfSimulator = ({ originalData, currentScore, currentHealthBreakdown, o
         setIsSimulating(true)
 
         try {
-            const response = await fetch('/simulate', {
+            const API_URL = import.meta.env.VITE_API_URL || ''
+            const response = await fetch(`${API_URL}/simulate`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newData)

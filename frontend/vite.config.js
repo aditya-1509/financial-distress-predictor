@@ -6,10 +6,29 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': {
-        target: process.env.VITE_API_URL || 'http://localhost:8000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+      '/predict': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
+      },
+      '/simulate': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
+      },
+      '/analyze_goal': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
+      },
+      '/generate_report': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
+      },
+      '/health': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
+      },
+      '/analyze_eda': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
       }
     }
   }

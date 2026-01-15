@@ -26,7 +26,8 @@ const GoalPlanningWidget = ({ householdData }) => {
         setIsAnalyzing(true)
 
         try {
-            const response = await fetch('/analyze_goal', {
+            const API_URL = import.meta.env.VITE_API_URL || ''
+            const response = await fetch(`${API_URL}/analyze_goal`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
