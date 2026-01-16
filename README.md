@@ -1,6 +1,5 @@
 ---
 title: Financial Predictor
-emoji: 📉
 colorFrom: green
 colorTo: blue
 sdk: docker
